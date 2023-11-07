@@ -2,27 +2,29 @@
   margin: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
   overflow: hidden;
-  background-color: white;
+  background-color: rgb(119, 204, 130);
   text-align: center;
   font-family: Helvetica Neu, Arial, sans-serif;
   margin: 0;
-  padding: 0;`
+  padding: 0;
   color: #444;
   box-sizing: border-box;
 }
 
-button, select {
+button,
+select {
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(121, 101, 101, 0.5);
   color: #ddd;
   font-weight: bold;
-  font-variant: small-caps;  
+  font-variant: small-caps;
   font-size: 16px;
   padding: 8px;
   min-width: 120px;
@@ -33,10 +35,10 @@ button, select {
 
 button:hover {
   background: rgba(0, 0, 0, 0.8);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
-.content{
+.content {
   /*height: 100vh;*/
   height: 100%;
   width: 100vw;
@@ -47,10 +49,9 @@ button:hover {
 .header {
   width: 100%;
   height: 70px;
-  box-shadow: 0 0 3px black;
-  background-color: rgb(12, 127, 194);
   color: white;
 }
+
 .headerTitle {
   font-size: 24pt;
   font-family: 'Roboto Condensed', sans-serif;
@@ -81,6 +82,7 @@ button:hover {
   z-index: 2;
   width: 100%;
 }
+
 .buttonIcon {
   display: inline-block;
   margin-right: 8px;
@@ -90,16 +92,18 @@ button:hover {
   top: 16px;
   height: 40px;
 }
-.JeelizVTOWidgetControlsTop > button {
-   width: 45%;
-   min-width: auto;
+
+.JeelizVTOWidgetControlsTop>button {
+  width: 45%;
+  min-width: auto;
 }
 
 #JeelizVTOWidgetChangeModelContainer {
   bottom: 16px;
-  height: 40px;  
+  height: 40px;
 }
-#JeelizVTOWidgetChangeModelContainer > button {
+
+#JeelizVTOWidgetChangeModelContainer>button {
   width: 20%;
   min-width: auto;
 }
@@ -112,8 +116,9 @@ button:hover {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
+
 .JeelizVTOWidgetLoadingText {
   color: white;
   font-size: 32pt;
@@ -123,11 +128,11 @@ button:hover {
 #JeelizVTOWidgetAdjustNotice {
   width: 100%;
   position: absolute;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   z-index: 3;
   font-size: 16px;
-  bottom: 0;  
+  bottom: 0;
   justify-content: center;
   padding-top: 2em;
   padding-bottom: 2em;
@@ -146,9 +151,11 @@ button:hover {
 #JeelizVTOWidgetAdjust {
   display: none;
 }
+
 #JeelizVTOWidgetChangeModelContainer {
   display: none;
 }
+
 #buttonResizeCanvas {
   display: none;
 }

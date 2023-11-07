@@ -35,30 +35,31 @@
     }
 
 
-    function get_initialSKU() {
-      // look if a SKU is provided as a URL parameters:
-      const queryString = window.location.search;
-      const URLParams = new URLSearchParams(queryString);
-      const sku = URLParams.get('sku') || 'rayban_aviator_or_vertFlash';
-      console.log('Initial SKU =', sku);
-      return sku;
-    }
+    // function get_initialSKU() {
+    //   // look if a SKU is provided as a URL parameters:
+    //   const queryString = window.location.search;
+    //   const URLParams = new URLSearchParams(queryString);
+    //   const sku = URLParams.get('sku') || 'rayban_aviator_or_vertFlash';
+    //   console.log('Initial SKU =', sku);
+    //   return sku;
+    // }
 
 
     function get_isShadow() {
       const queryString = window.location.search;
       const URLParams = new URLSearchParams(queryString);
-      return URLParams.get('isHideShadow') ? false : true;
+      return URLParams.get('isHideShadow') ? true : true;
     }
 
 
     // entry point:
     function main() {
       JEELIZVTOWIDGET.start({
-        isShadow: get_isShadow(),
-        sku: get_initialSKU(),
-        searchImageMask: 'https://appstatic.jeeliz.com/jeewidget/images/target.png',
-        searchImageColor: 0xeeeeee,
+        isShadow: false,
+        // isShadow: get_isShadow(),
+        // sku: get_initialSKU(),
+        // searchImageMask: 'https://appstatic.jeeliz.com/jeewidget/images/target.png',
+        // searchImageColor: 0xeeeeee,
         callbackReady: function () {
           console.log('INFO: JEELIZVTOWIDGET is ready :)');
 
@@ -121,7 +122,7 @@
 
     <div class='header'>
       <div class="headerTitle">
-        Jeeliz VTO Widget
+        VRDrobe
       </div>
     </div>
 
@@ -146,21 +147,24 @@
       <div class='JeelizVTOWidgetControls JeelizVTOWidgetControlsTop'>
         <!-- ADJUST BUTTON: -->
         <button id='JeelizVTOWidgetAdjust'>
-          <div class="buttonIcon"><i class="fas fa-arrows-alt"></i></div>Adjust
+          <!-- <div class="buttonIcon"><i class="fas fa-arrows-alt"></i></div>Adjust -->
+          Please select a model
         </button>
 
         <!-- RESIZE WIDGET BUTTON: -->
-        <button id='buttonResizeCanvas' onclick='test_resizeCanvas();'>
+        <!-- <button id='buttonResizeCanvas' onclick='test_resizeCanvas();'>
           <div class="buttonIcon"><i class="fas fa-sync-alt"></i></div>Resize widget
-        </button>
+        </button> -->
       </div>
 
       <!-- CHANGE MODEL BUTTONS: -->
       <div class='JeelizVTOWidgetControls' id='JeelizVTOWidgetChangeModelContainer'>
-        <button onclick="JEELIZVTOWIDGET.load('rayban_aviator_or_vertFlash')">Model 1</button>
-        <button onclick="JEELIZVTOWIDGET.load('rayban_round_cuivre_pinkBrownDegrade')">Model 2</button>
+        <!-- <button onclick="JEELIZVTOWIDGET.load('rayban_aviator_or_vertFlash')">Model 1</button>
+        <button onclick="JEELIZVTOWIDGET.load('rayban_round_cuivre_pinkBrownDegrade')">Model 2</button> -->
+        <button onclick="JEELIZVTOWIDGET.load_modelStandalone('glasses3D/glasses1.json')">Model 1</button>
+        <button onclick="JEELIZVTOWIDGET.load_modelStandalone('glasses3D/glasses3Textured.json')">Model 2</button>
         <button onclick="JEELIZVTOWIDGET.load_modelStandalone('glasses3D/Glasses.json')">Model 3</button>
-        <button onclick="load_modelBySKU()">by SKU</button>
+        <!-- <button onclick="load_modelBySKU()">by SKU</button> -->
       </div>
 
       <!-- BEGIN ADJUST NOTICE -->
